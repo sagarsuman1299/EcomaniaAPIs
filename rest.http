@@ -1,0 +1,58 @@
+# Get the list of players
+GET http://localhost:3000/api/players
+
+# Create a player
+POST http://localhost:3000/api/players
+Content-Type: application/json
+
+{
+    "moneyCount": 500,
+    "playerPosition": {
+        "x": -3.22503662109375,
+        "y": -0.11328125,
+        "z": 7.024892807006836
+    },
+    "answeredQues": 0,
+    "answeredCorrected": 0,
+    "theAccuracy": 0,
+    "assetsCount": 13,
+    "assetsName": [
+        "Chair",
+        "Table"
+    ],
+    "assetsState": [
+        true,
+        true
+    ],
+    "playerEmail": "Player Email Not Found",
+    "playerName": "Yet to Sign In"
+}
+
+# Get a player by ID
+GET http://localhost:3000/api/players/id
+# Replace `id` with the actual ID of the player, e.g., 60f0382ad91de80668e76d52
+
+# Update a player by ID
+PATCH http://localhost:3000/api/players/id
+Content-Type: application/json
+
+{
+    "moneyCount": 600
+    # Include other fields that you want to update
+}
+
+# Delete a player by ID
+DELETE http://localhost:3000/api/players/id
+# Replace `id` with the actual ID of the player, e.g., 60f055fab5cda6423c959dfe
+
+# Test request
+GET http://localhost:3000/test/1415424
+
+# Test request
+POST http://localhost:3000/test
+Content-Type: application/json
+
+{
+    "name": "878",
+    "description": "yeryerher"
+}
